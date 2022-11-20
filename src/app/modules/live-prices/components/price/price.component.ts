@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-price',
   templateUrl: './price.component.html',
   styleUrls: ['./price.component.css']
 })
-export class PriceComponent {
+export class PriceComponent implements OnChanges{
 
   @Input() priceKey: any;
   @Input() priceVal: any;
@@ -14,7 +14,7 @@ export class PriceComponent {
 
     public color: string;
     private prevPriceVal: string;
-    public rise: boolean;
+    public rise: boolean = false;
 
     ngOnChanges(): void {
       if (this.prevPriceVal) {
