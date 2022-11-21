@@ -6,19 +6,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '@app/shared/shared.module';
 
+import { DisplayPriceComponent } from './components/display-price/display-price.component';
 import { LivePricesComponent } from './live-prices.component';
 import { PriceComponent } from './components/price/price.component';
-import { DisplayPriceComponent } from './components/display-price/display-price.component';
 import { FormatPairsPipe } from '@app/pipes/formatpairs';
-
-
 
 @NgModule({
   declarations: [
-    LivePricesComponent,
-    PriceComponent,
     DisplayPriceComponent,
+    PriceComponent,
     FormatPairsPipe,
+    LivePricesComponent
   ],
   imports: [
     CommonModule,
@@ -30,4 +28,6 @@ import { FormatPairsPipe } from '@app/pipes/formatpairs';
   ],
   exports: [LivePricesComponent]
 })
-export class LivePricesModule { }
+export class LivePricesModule {
+  constructor() { }
+}

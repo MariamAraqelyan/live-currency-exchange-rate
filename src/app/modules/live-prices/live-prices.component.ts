@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-live-prices',
+  selector: 'live-prices',
   templateUrl: './live-prices.component.html',
-  styleUrls: ['./live-prices.component.css']
+  styleUrls: ['./live-prices.component.scss']
 })
-export class LivePricesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class LivePricesComponent {
+  title = 'Orange-V2';
 }

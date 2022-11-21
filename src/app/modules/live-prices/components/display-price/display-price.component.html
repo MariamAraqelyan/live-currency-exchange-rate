@@ -1,6 +1,3 @@
 <div class="card-wrapper">
-  <app-price *ngFor="let item of prices | async | keyvalue"
-             [priceKey]="item?.key"
-             [priceVal]="item?.value">
-  </app-price>
+  <app-price *ngFor="let item of prices | async | keyvalue; trackBy: trackByFn" [priceKey]="item?.key" [priceVal]="item?.value"></app-price>
 </div>
