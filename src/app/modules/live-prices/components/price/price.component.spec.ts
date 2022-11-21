@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormatPairsPipe } from '@app/pipes/formatpairs';
 
 import { PriceComponent } from './price.component';
 
@@ -8,7 +9,7 @@ describe('PriceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PriceComponent ]
+      declarations: [ PriceComponent, FormatPairsPipe ]
     })
     .compileComponents();
   }));
